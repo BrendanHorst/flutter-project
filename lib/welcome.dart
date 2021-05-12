@@ -27,19 +27,27 @@ class WelcomePage extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  height: 60,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(30)
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LogIn()),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 60,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: Text("Sign In",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                      ))
                   ),
-                  child: Text("Sign In",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                    ))
                 ),
                 Container(
                     alignment: Alignment.center,

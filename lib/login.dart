@@ -21,6 +21,7 @@ class LogIn extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.red,
             border: Border.all(color: Colors.black),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
