@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'roster.dart';
 
 void main() {
   runApp(
@@ -44,11 +45,27 @@ class PatientHome extends StatelessWidget {
                 child: Text("Log Out"),
               )
             ),
-            ListTile(
-              title: Text("Home"),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PatientHome()),
+                  );
+              },
+              child: ListTile(
+                title: Text("Home"),
+              ),
             ),
-            ListTile(
-              title: Text("Roster"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Roster()),
+                );
+              },
+              child: ListTile(
+                title: Text("Roster"),
+              ),
             ),
 
           ],
