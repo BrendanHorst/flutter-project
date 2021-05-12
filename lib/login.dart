@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:retirement_home_manager/main.dart';
+import 'patientHome.dart';
 
 void main() {
   runApp(
       MaterialApp(
-        home: MyApp(),
+        home: LogIn(),
       ));
 }
 
-class MyApp extends StatelessWidget {
+class LogIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +61,10 @@ class MyApp extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  print("test");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PatientHome()),
+                  );
                 },
                 child: Container(
                   alignment: Alignment.center,
