@@ -135,8 +135,15 @@ class PatientHome extends StatelessWidget {
             ),
 
             Container(
-              width: 300,
               margin: EdgeInsets.only(top: 40),
+              child: Text("Today's Schedule",
+                style: TextStyle(
+                  fontSize: 20,
+                )),
+            ),
+
+            Container(
+              width: 300,
               child: Column(
                 children: [
                   Container(
