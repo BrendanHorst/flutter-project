@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'roster.dart';
+import 'welcome.dart';
 
 void main() {
   runApp(
@@ -30,7 +31,7 @@ class PatientHome extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LogIn()),
+                  MaterialPageRoute(builder: (context) => WelcomePage()),
                 );
               },
               child: Container(
@@ -146,6 +147,16 @@ class PatientHome extends StatelessWidget {
                       margin: EdgeInsets.only(top: 20),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.red),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime(2030)
+                          );
+                        },
                       )
                   )
                 ]
